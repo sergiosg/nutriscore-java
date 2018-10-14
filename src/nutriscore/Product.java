@@ -9,6 +9,7 @@ public class Product {
 	private final Float fat;
 	private final Float saturatedFat;
 	private final Float sodium;
+	private final Float salt;
 	private final Float sugar;
 
 	public Product(ProductBuilder builder) {
@@ -20,6 +21,7 @@ public class Product {
 		this.sodium = builder.sodium;
 		this.sugar = builder.sugar;
 		this.energy = builder.energy;
+		this.salt = builder.salt;
 	}
 
 	public Float getFiber() {
@@ -54,6 +56,10 @@ public class Product {
 		return sugar;
 	}
 
+	public Float getSalt() {
+		return salt;
+	}
+	
 	public static class ProductBuilder {
 		private Float fiber;
 		private Float proteins;
@@ -61,6 +67,7 @@ public class Product {
 		private Float fat;
 		private Float saturatedFat;
 		private Float sodium;
+		private Float salt;
 		private Float sugar;
 		private Float fruits;
 
@@ -101,6 +108,11 @@ public class Product {
 
 		public ProductBuilder sugar(Float sugar) {
 			this.sugar = sugar;
+			return this;
+		}
+
+		public ProductBuilder salt(Float salt) {
+			this.salt = salt;
 			return this;
 		}
 
