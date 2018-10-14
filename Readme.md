@@ -2,7 +2,7 @@ Nutriscore algorithm implementated in java
 
 Use example:
 
-`		final Product product = new Product.ProductBuilder()
+		`final Product product = new Product.ProductBuilder()
 				.energy(1121f)
 				.fat(3f)
 				.saturatedFat(0.5f)
